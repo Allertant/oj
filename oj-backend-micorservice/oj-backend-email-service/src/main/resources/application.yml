@@ -1,0 +1,32 @@
+# 公共配置文件
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: oj-backend-email-service
+  # 默认 dev 环境
+  profiles:
+    active: dev
+  # 支持 swagger3
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+# 服务器配置
+server:
+  address: 0.0.0.0
+  # 端口
+  port: 8085
+  servlet:
+    context-path: /api/email
+# 开启 knife4j 文档功能
+knife4j:
+  enable: true
+email:
+  config:
+    auth: true
+    username: xiaoxi202307@163.com
+    password: QCJFTXNYUJOYKYIV
+    degub: true
+    host: smtp.163.com

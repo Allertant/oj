@@ -1,0 +1,13 @@
+D:\code\003_oj\oj-backend-micorservice\oj-backend-user-service\src\main\java\com\shiyixi\ojbackenduserservice\mapper\UserMapper.java
+D:\code\003_oj\oj-backend-micorservice\oj-backend-user-service\src\main\java\com\shiyixi\ojbackenduserservice\service\UserService.java
+D:\code\003_oj\oj-backend-micorservice\oj-backend-user-service\src\main\java\com\shiyixi\ojbackenduserservice\service\impl\UserServiceImpl.java
+D:\code\003_oj\oj-backend-micorservice\oj-backend-user-service\src\main\java\com\shiyixi\ojbackenduserservice\rabbitmq\InitRabbitMq.java
+D:\code\003_oj\oj-backend-micorservice\oj-backend-user-service\src\main\java\com\shiyixi\ojbackenduserservice\utils\VerifyCodeTemplate.java
+D:\code\003_oj\oj-backend-micorservice\oj-backend-user-service\src\main\java\com\shiyixi\ojbackenduserservice\controller\inner\UserInnerController.java
+D:\code\003_oj\oj-backend-micorservice\oj-backend-user-service\src\main\java\com\shiyixi\ojbackenduserservice\conofig\MyBatisPlusConfig.java
+D:\code\003_oj\oj-backend-micorservice\oj-backend-user-service\src\main\java\com\shiyixi\ojbackenduserservice\OjBackendUserServiceApplication.java
+D:\code\003_oj\oj-backend-micorservice\oj-backend-user-service\src\main\java\com\shiyixi\ojbackenduserservice\rabbitmq\ErrorConfiguration.java
+D:\code\003_oj\oj-backend-micorservice\oj-backend-user-service\src\main\java\com\shiyixi\ojbackenduserservice\rabbitmq\MyMessageConsumer.java
+D:\code\003_oj\oj-backend-micorservice\oj-backend-user-service\src\main\java\com\shiyixi\ojbackenduserservice\controller\UserController.java
+D:\code\003_oj\oj-backend-micorservice\oj-backend-user-service\src\main\java\com\shiyixi\ojbackenduserservice\conofig\WebMvcConfiguration.java
+D:\code\003_oj\oj-backend-micorservice\oj-backend-user-service\src\main\java\com\shiyixi\ojbackenduserservice\rabbitmq\MyMessageProducer.java

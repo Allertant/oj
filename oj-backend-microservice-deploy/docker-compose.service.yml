@@ -1,0 +1,87 @@
+version: '3'
+services:
+  oj-backend-gateway:
+    container_name: oj-backend-gateway
+    build: # 服务的 Docker 构建文件位置
+      context: ./oj-backend-gateway
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    networks:
+      - ojnetwork
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 100M
+  oj-backend-user-service:
+    container_name: oj-backend-user-service
+    build:
+      context: ./oj-backend-user-service
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    networks:
+      - ojnetwork
+    depends_on: # 本服务依赖的服务，控制启动的先后顺序
+      - oj-backend-gateway
+      - oj-backend-email-service
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 100M
+  oj-backend-question-service:
+    container_name: oj-backend-question-service
+    build:
+      context: ./oj-backend-question-service
+      dockerfile: Dockerfile
+    ports:
+      - "8083:8083"
+    networks:
+      - ojnetwork
+    depends_on:
+      - oj-backend-user-service
+      - oj-backend-gateway
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 100M
+  oj-backend-judge-service:
+    container_name: oj-backend-judge-service
+    build:
+      context: ./oj-backend-judge-service
+      dockerfile: Dockerfile
+    ports:
+      - "8084:8084"
+    networks:
+      - ojnetwork
+    depends_on:
+      - oj-backend-user-service
+      - oj-backend-question-service
+      - oj-backend-gateway
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 100M
+  oj-backend-email-service:
+    container_name: oj-backend-email-service
+    build:
+      context: ./oj-backend-email-service
+      dockerfile: Dockerfile
+    ports:
+      - "8085:8085"
+    depends_on:
+      - oj-backend-gateway
+    networks:
+      - ojnetwork
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 100M
+# 网络，不定义的话就是默认网络
+networks:
+  ojnetwork: # 网络

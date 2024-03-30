@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkoj_front"]=self["webpackChunkoj_front"]||[]).push([[7594],{55609:function(n,t,u){u.r(t),u.d(t,{default:function(){return l}});var r=u(56768);const a={class:"about"},e=(0,r.Lk)("h1",null,"This is an about page",-1),o=[e];function s(n,t){return(0,r.uX)(),(0,r.CE)("div",a,o)}var c=u(71241);const f={},i=(0,c.A)(f,[["render",s]]);var l=i}}]);
+//# sourceMappingURL=about.de6000ca.js.map

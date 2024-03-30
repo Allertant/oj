@@ -1,0 +1,34 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: nacos:8848
+    gateway:
+      routes:
+        - id: oj-backend-user-service
+          uri: lb://oj-backend-user-service
+          predicates:
+            - Path=/api/user/**
+        - id: oj-backend-question-service
+          uri: lb://oj-backend-question-service
+          predicates:
+            - Path=/api/question/**
+        - id: oj-backend-judge-service
+          uri: lb://oj-backend-judge-service
+          predicates:
+            - Path=/api/judge/**
+  application:
+    name: oj-backend-gateway
+  # 使用响应式编程
+  main:
+    web-application-type: reactive
+server:
+  port: 8081
+knife4j:
+  gateway:
+    enabled: true
+    # 服务发现模式
+    strategy: discover
+    discover:
+      enabled: true
+      version: swagger2

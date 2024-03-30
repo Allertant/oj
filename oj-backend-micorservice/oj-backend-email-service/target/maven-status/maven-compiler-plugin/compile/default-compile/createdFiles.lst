@@ -1,0 +1,10 @@
+com\shiyixi\ojbackendemailservice\controller\inner\EmailController.class
+com\shiyixi\ojbackendemailservice\EmailManager.class
+com\shiyixi\ojbackendemailservice\model\EmailSendObj.class
+com\shiyixi\ojbackendemailservice\EmailService.class
+com\shiyixi\ojbackendemailservice\strategy\EmailStrategy.class
+com\shiyixi\ojbackendemailservice\strategy\VerifyCodeEmailStrategy.class
+com\shiyixi\ojbackendemailservice\strategy\LogEmailStrategy.class
+com\shiyixi\ojbackendemailservice\OjBackendEmailApplication.class
+com\shiyixi\ojbackendemailservice\exception\EmailTypeNotFoundException.class
+com\shiyixi\ojbackendemailservice\model\EmailTypeEnum.class

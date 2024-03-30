@@ -1,0 +1,6 @@
+# 生产环境配置文件
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: nacos:8848

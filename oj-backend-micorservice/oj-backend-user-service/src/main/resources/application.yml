@@ -1,0 +1,98 @@
+# 公共配置文件
+spring:
+  application:
+    name: oj-backend-user-service
+  # 默认 dev 环境
+  profiles:
+    active: dev
+  # 支持 swagger3
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  # session 配置
+  session:
+    store-type: redis
+    # 30 天过期
+    timeout: 2592000
+  # 数据库配置
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/oj
+    username: root
+    password: 123456
+  # Redis 配置
+  redis:
+    database: 1
+    host: localhost
+    port: 6379
+    timeout: 5000
+    # password: 123456
+  # 文件上传
+  servlet:
+    multipart:
+      # 大小限制
+      max-file-size: 10MB
+  # 微服务
+  cloud:
+    # nacos 配置
+    nacos:
+      # 服务发现
+      discovery:
+        server-addr: 127.0.0.1:8848
+    # sentinel
+#    sentinel:
+#      # 通信模块
+#      transport:
+#        dashboard: localhost:8079
+#      # 饥饿加载
+#      eager: true
+#      enabled: true
+#      filter:
+#        enabled: false
+  # mq
+  rabbitmq:
+    host: localhost
+    port: 5672
+    password: guest
+    username: guest
+    publisher-confirm-type: correlated # 开启 publishser confirm 确认机制，并设置为异步回调
+    listener:
+      simple:
+        acknowledge-mode: auto # none manual auto 直接返回 手动确认 自动确认
+        retry: # 重试，仅 auto 下起作用，由本地客户端自动发送 ack nack reject
+          enabled: true
+          initial-interval: 1000ms # 初始的等待时长倍数
+          multiplier: 1 #下次失败的等待时长倍数
+          max-attempts: 3 # 最大重试次数
+          stateless: true # true 无状态 false 有状态 （如果业务中有事务，则使用 false）
+        prefetch: 1 # 每次取 1 条
+# 服务器配置
+server:
+  address: 0.0.0.0
+  # 端口
+  port: 8082
+  servlet:
+    context-path: /api/user
+    # cookie 30 天过期
+    session:
+      cookie:
+        max-age: 2592000
+        path: /api
+# mybatis-plus 配置
+mybatis-plus:
+  configuration:
+    # 关闭驼峰映射
+    map-underscore-to-camel-case: false
+    # 日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 开启二级缓存
+    cache-enabled: true
+  global-config:
+    db-config:
+      logic-delete-field: isDelete # 全局逻辑删除的实体字段名
+      logic-delete-value: 1 # 逻辑已删除值（默认为 1）
+      logic-not-delete-value: 0 # 逻辑未删除值（默认为 0）
+# 开启 knife4j 文档功能
+knife4j:
+  enable: true

@@ -1,0 +1,15 @@
+com\shiyixi\ojbackendcommon\common\DeleteRequest.class
+com\shiyixi\ojbackendcommon\common\ResultUtils.class
+com\shiyixi\ojbackendcommon\common\ErrorCode.class
+com\shiyixi\ojbackendcommon\common\PageRequest.class
+com\shiyixi\ojbackendcommon\config\JsonConfig.class
+com\shiyixi\ojbackendcommon\utils\SqlUtils.class
+com\shiyixi\ojbackendcommon\annotation\AuthCheck.class
+com\shiyixi\ojbackendcommon\utils\NetUtils.class
+com\shiyixi\ojbackendcommon\constant\CommonConstant.class
+com\shiyixi\ojbackendcommon\exception\BusinessException.class
+com\shiyixi\ojbackendcommon\exception\GlobalExceptionHandler.class
+com\shiyixi\ojbackendcommon\exception\ThrowUtils.class
+com\shiyixi\ojbackendcommon\common\BaseResponse.class
+com\shiyixi\ojbackendcommon\constant\FileConstant.class
+com\shiyixi\ojbackendcommon\constant\UserConstant.class

@@ -1,0 +1,4 @@
+com\shiyixi\ojbackendserviceclient\service\JudgeFeignClient.class
+com\shiyixi\ojbackendserviceclient\service\QuestionFeignClient.class
+com\shiyixi\ojbackendserviceclient\service\UserFeignClient.class
+com\shiyixi\ojbackendserviceclient\service\EmailFeignClient.class

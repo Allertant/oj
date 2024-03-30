@@ -1,0 +1,14 @@
+com\shiyixi\ojbackenduserservice\service\UserService.class
+com\shiyixi\ojbackenduserservice\rabbitmq\ErrorConfiguration.class
+com\shiyixi\ojbackenduserservice\OjBackendUserServiceApplication.class
+com\shiyixi\ojbackenduserservice\rabbitmq\InitRabbitMq.class
+com\shiyixi\ojbackenduserservice\rabbitmq\MyMessageConsumer.class
+com\shiyixi\ojbackenduserservice\utils\VerifyCodeTemplate.class
+com\shiyixi\ojbackenduserservice\controller\inner\UserInnerController.class
+com\shiyixi\ojbackenduserservice\conofig\MyBatisPlusConfig.class
+com\shiyixi\ojbackenduserservice\service\impl\UserServiceImpl.class
+com\shiyixi\ojbackenduserservice\mapper\UserMapper.class
+com\shiyixi\ojbackenduserservice\conofig\WebMvcConfiguration.class
+com\shiyixi\ojbackenduserservice\rabbitmq\MyMessageProducer.class
+com\shiyixi\ojbackenduserservice\rabbitmq\MyMessageProducer$1.class
+com\shiyixi\ojbackenduserservice\controller\UserController.class
